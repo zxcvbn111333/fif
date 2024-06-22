@@ -1,0 +1,95 @@
+
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: url(https://sotni.ru/wp-content/uploads/2023/08/fon-dlia-prezentatsii-kosmos-5.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Caveat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+section {
+  background: rgba( 0,0,0,.6);
+  border-radius: 5px;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 400px;
+}
+section h2 {
+  color: #fbff00;
+  font-family: 'Caveat', sans-serif;
+  font-size: 30px;
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: center;
+}
+section div {
+  position: relative;
+}
+section div input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fbff00;
+  color: #ffe600;
+  font-family: 'Caveat', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  padding: 10px 0;
+  outline: none;
+  width: 100%;
+}
+section div label {
+  color: #fbff00;
+  font-size: 22px;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  transition: .5s;
+}
+section div input:focus ~ label,
+section div input:valid ~ label {
+  color: #e5ff00;
+  font-size: 22px;
+  left: 0;
+  top: -22px;
+}
+section input[type="submit"] {
+  background: #d9ff00;
+  border: none;
+  border-radius: 10px;
+  color:#3700ff;
+  cursor: pointer;
+  font-family: 'Caveat', sans-serif;
+  font-size: 24px;
+  padding: 6px 28px;
+  outline: none;
+}
+</style>
+<section>
+    <h2>Enter</h2>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div>
+        <label for="text"><b></b></label>
+      <input type="text" placeholder="Enter Name" name="Name" required>
+      </div>
+      <div>
+        <label for="psw"><b></b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      </div>
+    <input type="Submit" name="" value="OK">
+    </form>
+  </section>
+  
